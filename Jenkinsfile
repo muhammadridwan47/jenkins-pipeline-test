@@ -18,7 +18,7 @@ pipeline {
        }
     }
 
-    // post run after the task excuted
+    // post runs after the task excuted
     post {
         always {
             echo "always run in any condition"
