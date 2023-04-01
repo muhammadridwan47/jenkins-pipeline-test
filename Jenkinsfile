@@ -1,11 +1,21 @@
 pipeline {
     agent any
     stages {
-        stage("Hello Server") {
+        stage("Build") {
             steps {
-                echo("Hello Pipeline")
+                echo("on Build")
             }
         }
+        stage("Test") {
+            steps {
+                echo("on Test")
+            }
+        }
+        stage("Deploy") {
+            steps {
+                echo("on Deploy")
+            }
+       }
     }
 
     // post run after the task excuted
