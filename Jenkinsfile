@@ -1,5 +1,7 @@
 @Library('shared-library-jenkins') _
 
+import classschema.jenkins.Output;
+
 pipeline {
     agent any
     stages {
@@ -13,6 +15,9 @@ pipeline {
         }
         stage("Test") {
             steps {
+                 script {
+                    Output.hello(this, "Komang James")
+                }  
                 echo("on Test")
             }
         }
