@@ -1,8 +1,13 @@
+@Library('shared-library-jenkins') _
+
 pipeline {
     agent any
     stages {
         stage("Build") {
             steps {
+                script {
+                    welcome.world()
+                }             
                 echo("on Build")
             }
         }
